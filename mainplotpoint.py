@@ -2,14 +2,14 @@ from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-import mainxyz
+import mainxyz1
 
-xpoint=[]
-ypoint=[]
-zpoint=[]
+#xpoint=[]
+#ypoint=[]
+#zpoint=[]
 
-fig = plt.figure(figsize=(10, 7))
-ax = plt.axes(projection="3d")
+#fig = plt.figure(figsize=(10, 7))
+#ax = plt.axes(projection="3d")
 
 ##def plot_point3D(x,y,z):
 ##    # Creating figure
@@ -38,7 +38,7 @@ def update(frame):
     
     fig.canvas.draw()
 
-anim=FuncAnimation(fig,update)
+anim=FuncAnimation(fig,update0)
 plt.show()
 
 
