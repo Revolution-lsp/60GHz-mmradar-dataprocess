@@ -66,7 +66,7 @@ def read_from_port(port):
                 next_byte = ser.read(1)
                 if next_byte == b'\x59':
                     print("Start frame detected")
-                    data = [0x53, 0x59]
+                    data = [0x53, 0x63]
                     continue
                     
             data.append(ord(byte))
@@ -82,9 +82,9 @@ def read_from_port(port):
                     x = parse_data(data[6],data[7])
                     y = parse_data(data[8],data[9])
                     z = parse_data(data[10],data[11])
-##                    xpoint.append(x)
-##                    ypoint.append(y)
-##                    zpoint.append(z)
+                    xpoint.append(x)
+                    ypoint.append(y)
+                    zpoint.append(z)
                     print(f' X: {x} cm, Y: {y} cm, Z: {z} cm')
                     #plot_point3D(x,y,z)
                     return x,y,z
